@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "Edvertisements Local",
+  "short_name": "edvertisementslocal",
+  "description": "Edvertisements are advertisements designed to benefit you and help you learn.",
+  "version": "1.0",
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": [
+      "bower_components/jquery/dist/jquery.min.js",
+      "easylist_text.js",
+      "abp_filter_parser.js",
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "bower_components/jquery/dist/jquery.min.js",
+        "functions.js",
+        "baseurl.js",
+        "contentscript.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    "inject.js"
+  ]
+}
