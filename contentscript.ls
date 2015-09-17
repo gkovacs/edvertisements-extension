@@ -89,7 +89,7 @@ getGoodAdIframeSrc = (width, height) ->
     width = 200
   if not height?
     height = 200
-  return baseurl + '?' + $.param({width, height})
+  return baseurl + '/edv.html?' + $.param({width, height})
 
 check_if_blocked = (data, callback) ->
   data.type = 'isblocked'

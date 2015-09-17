@@ -13,7 +13,7 @@ writeJSON = fsx.writeJSONSync
 exists = fsx.existsSync
 mv = fsx.moveSync
 
-version = '1.0'
+version = '1.1'
 jsfiles = <[ bower_components abp_filter_parser.js background.js functions.js contentscript.js easylist_text.js  ]>
 
 base_permissions = [

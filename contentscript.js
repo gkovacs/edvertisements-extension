@@ -84,7 +84,7 @@
     if (height == null) {
       height = 200;
     }
-    return baseurl + '?' + $.param({
+    return baseurl + '/edv.html?' + $.param({
       width: width,
       height: height
     });
